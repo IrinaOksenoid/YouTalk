@@ -46,7 +46,7 @@
       height: 72px;
     }
     .header{
-        height: 72px;
+      height: 72px;
   }
 }
     /* iPad min */
@@ -55,7 +55,7 @@
       height: 76px;
     }
     .header{
-        height: 76px;
+      height: 76px;
   }
 }
   .header__logo {
@@ -108,7 +108,6 @@
     background-color: #35B3A9;
     color: #fff;
       }
-  
   .content__button {
     background-color: #35B3A9;
     color: #fff;
@@ -122,7 +121,6 @@
       display: block;
       background-color: #E3F5F5;
     color: #03B2A5;
-    
     }
   }
   .header__burger {
@@ -150,39 +148,33 @@
     padding-top: 16px;
     padding-bottom: 60px;
   }
-  .breadcrumb > ul {
-    display: flex;
+  .breadcrumb{
+   display: flex;
     padding: 0;
     margin: 0;
+   
   }
+    
+  .breadcrumb *{
+    margin-right: 8px;
+      }
+
   .breadcrumb__item {
     list-style: none;
     color: rgba(51,51,51,70%);
     font-size: 12px;
     line-height: 18px;
-    display: flex;
-    gap: 4px;
-    align-items: center;
-  }
-  
-  .breadcrumb__item:not(:last-child)::after {
-    content: ' ';
-    background-image: url('images/arrow.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 10px;
-    width: 16px;
-  }
-  
-  .breadcrumb__item:nth-of-type(even) {
-    margin-left: 8px;
-  }
+    }
+  .breadcrumb__item:last-of-type {
+    white-space: nowrap;
+    overflow: hidden; /* Скрыть содержимое, которое не умещается */
+    text-overflow: ellipsis; /* Показать многоточие, если содержимое обрезается */
+     }
   .content__header {
     font-size: 24px;
     margin-top: 24px;
   }
-  
-  
+   
   /* iPhone SE */
   @media screen and (min-width: 375px) {
     .content__header {
@@ -274,11 +266,11 @@
       }
     }
     .articles-section .article {
-      display: grid; /* Возвращаем обратно grid для .article */
+      display: grid; 
     }
   
     .articles-section .article:nth-child(n + 5) {
-      display: block; /* Показываем скрытые элементы, начиная с пятого */
+      display: block; 
     }
   }
   
@@ -330,7 +322,7 @@
     padding: 6px 8px;
     font-size: 14px;
     box-shadow: #C1C5CD 0px 0px 0px 1px inset;
-    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
+    background-color: rgba(255, 255, 255, 0.5); 
     z-index: 1;
   }
   .articles__filter:nth-child(3) {
@@ -339,8 +331,7 @@
     margin-top: 4px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 18px;
-  }
+      }
   .article__body {
     grid-area: article-body;
     border: 1px solid #DEDEDE;
@@ -361,8 +352,7 @@
     margin-bottom: 16px;
     overflow: visible; 
     white-space: normal;
-   /*height: calc(2em + 5px);*/
-  }
+    }
   .article__header {
     font-size: 18px;
     font-weight: 700;
@@ -395,26 +385,22 @@
       }  
   @media screen and (min-width: 414px) {
     .footer__button {
-      display: block;
-      width: 64px;
+    display: block;
+    width: 64px;
     height: 48px;
     padding: 1px 1px;
-    
     }
 }
 .footer__layout {
   display: flex; 
   flex-wrap: wrap;
   gap: 21px;
- justify-content: space-between;
+  justify-content: space-between;
   padding-top: 35px;
-  /*padding-bottom: 23px; 
-  /*padding-left: 18px;*/ 
   padding-right: 14px; 
   width: 100%;
   max-width: 1214px;
-  
-}
+  }
 
 .footer__form {
  display: flex; 
@@ -434,7 +420,7 @@
 @media screen and (min-width: 768px) {
   .footer__form {
     flex-direction: row;
-     }
+  }
   .footer__nav {
     flex-grow: 0;
     max-width: 310px;
@@ -477,8 +463,8 @@ h2{
 input {
     padding-left: 16px;
     border-radius: 4px;
-    width: 100%; /* Ширина input будет равна ширине контейнера минус ширина кнопки и отступы */
-    max-width: 320px; /* Максимальная ширина input */
+    width: 100%; 
+    max-width: 320px; 
     height: 48px;
 }
 .footer__subscription__pers{
@@ -488,16 +474,15 @@ input {
   opacity: 0.7;
 }
 .footer__social {
-  width: 221px; /* Ширина блока footer__social */
-  height: 112px; /* Высота блока footer__social */
+  width: 221px; 
+  height: 112px; 
   padding-left: 18px;
 }
 @media screen and (min-width: 1024px) {
     .footer__layout {
         flex-direction: row;
         flex-wrap: nowrap;
-        
-}
+    }
 }
 
 .footer__icons {
@@ -512,20 +497,21 @@ input {
 }
 @media screen and (min-width: 1024px) {
   .footer__social {
-    padding-left: 0};
+    padding-left: 0
+  };
   .footer__social-icons {
-        margin-top: 40px;
-}
+    margin-top: 40px;
+  }
 }
 .footer__coryright{
   display: flex;
   flex-grow: 1; 
-    flex-direction: column;
-    gap: 24px; 
-    margin-left: 18px;
-    margin-bottom: 20px;
-    align-self: start;
-    }
+  flex-direction: column;
+  gap: 24px; 
+  margin-left: 18px;
+  margin-bottom: 20px;
+  align-self: start;
+}
 .footer__coryright > div{
   font-size: 14px;
   font-weight: 400;
@@ -534,7 +520,7 @@ input {
 @media screen and (min-width: 768px) {
   .footer__coryright {
     flex-direction: row;
-    }
+  }
 }
 @media screen and (min-width: 1248px) {
   .footer__form {
@@ -543,11 +529,95 @@ input {
   .footer__coryright {
     width: 1214px;
     align-self: center;
-  margin-left: 0px;}
+  margin-left: 0px;
+  }
   }
   .footer__line {
-    width: calc(100% - 36px); /* Ширина равна ширине родительского элемента минус два отступа по 18px */
-    height: 2px; /* Толщина линии */
-    background-color: rgba(157, 157, 157, 0.3); /* Цвет линии */
-    margin: 20px 18px; /* Отступы по 18px */
+    width: calc(100% - 36px); 
+    height: 2px; 
+    background-color: rgba(157, 157, 157, 0.3); 
+    margin: 20px 18px; 
+  }
+  .section__paper {
+    display: flex;
+    flex-direction: column;
+}
+  .section__paper img{
+    width: 100%;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+    position: relative; 
+  }
+  
+.section__paper ol:first-of-type li {
+  text-decoration: underline; /* Применение подчеркивания ко всем элементам <li> первого <ol> */
+}
+
+.section__header span{
+  font-size: 14px;
+  font-weight: 400;
+}
+.section__header a{
+  color: #2963A3;
+}
+.section__header a:hover{
+  color: #a32980;
+}
+  .section__points {
+    list-style-image: url('images/circle.png'); /* Путь к изображению точки */
+    padding-left: 24px; /* Установка отступа для текста, чтобы точка не перекрывала текст */
+  }
+  .section__points li{
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-left: 8px;;
+
+  }
+  .quote__text {
+    background-color: #F3F7FE;
+    border-radius: 16px;
+  }
+  .quote__text {
+    background-image: url('images/quote.png');
+    background-repeat: no-repeat;
+    background-position: 16px 16px; /* Отступ от левого верхнего угла */
+    }
+    .section__paper *{
+      margin-bottom: 8px;
+    }
+    .section__header{
+      margin-bottom: 16px;
+      margin-top: 24px;
+    }
+    .quote__text {
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 26px;
+      padding-bottom: 16px;
+    }
+    .quote__text section:first-child{
+      font-style: italic;
+      font-weight: 400;
+    }
+    .quote__text section:last-child {
+      font-weight: 700;
+  }
+  .section__text{
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .test{
+    display: flex;
+  flex-wrap: nowrap;}
+  .test1:last-of-type{
+      /*flex-shrink: 0; /* Предотвратить сжатие последнего элемента */
+      white-space: nowrap; /* Запретить перенос содержимого на новую строку */
+      overflow: hidden; /* Скрыть содержимое, которое не умещается */
+      text-overflow: ellipsis; /* Показать многоточие, если содержимое обрезается */
+      width: 100%;
+    
+      
   }
