@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', serif;
+    font-size: 16px;
   }  
   html, body {
     height: 100%;
@@ -79,11 +80,15 @@
       }
 .header__menu__item {
     list-style: none;
-    font-size: 16px;
+    
+  }.header__menu__item a {
+    font-size: 14px;
     font-weight: 500;
+    
   }
     a {
     text-decoration: none;
+    
   }
     .header__menu__item > a:active {
     color: inherit;
@@ -156,7 +161,7 @@
   }
     
   .breadcrumb *{
-    margin-right: 8px;
+    margin-right: 14px;
       }
 
   .breadcrumb__item {
@@ -171,7 +176,7 @@
     text-overflow: ellipsis; /* Показать многоточие, если содержимое обрезается */
      }
   .content__header {
-    font-size: 24px;
+    font-size: 1.5em;
     margin-top: 24px;
   }
    
@@ -184,15 +189,15 @@
   
   /* iPhone 11 */
   @media screen and (min-width: 414px) {
-    .content__header {
-      font-size: 32px;
+    * {
+      font-size: 22px;
     }
   }
   
   /* iPad min */
   @media screen and (min-width: 768px) {
-    .content__header{
-      font-size: 48px;
+    *{
+      font-size: 32px;
     }
   }
   .articles-filter {
@@ -211,6 +216,7 @@
     flex-wrap: nowrap;
     white-space: nowrap;
     font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
     box-shadow: #C1C5CD 0px 0px 0px 1px inset;
   }
@@ -223,7 +229,7 @@
     box-shadow: #16C8BB 0px 0px 0px 2px inset;
   }
   /* iPhone 11 */
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: 768px) {
   
     .articles-filter {
       flex-wrap: wrap;
@@ -312,7 +318,7 @@
     margin-right: 4px;
 }
   
-  .articles__filter {
+  .articles__top {
    position: absolute;
     display: flex;
     top: 8px;
@@ -321,11 +327,12 @@
     border-radius: 24px;
     padding: 6px 8px;
     font-size: 14px;
+    font-weight: 600;
     box-shadow: #C1C5CD 0px 0px 0px 1px inset;
     background-color: rgba(255, 255, 255, 0.5); 
     z-index: 1;
   }
-  .articles__filter:nth-child(3) {
+  .articles__top:nth-child(3) {
     top: 48px;}
   .article__author {
     margin-top: 4px;
@@ -343,6 +350,7 @@
   }
   .article__date {
     margin-top: auto;
+    font-size: 12px;
   }
   .article__description {
     font-size: 14px;
@@ -388,7 +396,6 @@
     display: block;
     width: 64px;
     height: 48px;
-    padding: 1px 1px;
     }
 }
 .footer__layout {
@@ -396,7 +403,7 @@
   flex-wrap: wrap;
   gap: 21px;
   justify-content: space-between;
-  padding-top: 35px;
+  padding-top: 30px;
   padding-right: 14px; 
   width: 100%;
   max-width: 1214px;
@@ -435,14 +442,18 @@
 .footer__menu {
     list-style-type: none; 
     margin: 0;
-    padding: 0;
+    
+        
 }
 
-.footer__nav__item {
-    list-style: none;
+.footer__nav__item *{
+  display: inline-block; /* Устанавливаем элементы <a> как блочные, чтобы применить vertical-align */
+    vertical-align: top; /* Выравниваем текст по верхней линии */  
+  list-style: none;
     font-weight: 700;
     font-size: 16px;
-    line-height: 38px;
+    margin-bottom: 16px;
+    
 }
 
 
@@ -466,6 +477,7 @@ input {
     width: 100%; 
     max-width: 320px; 
     height: 48px;
+    font-size: 14px;
 }
 .footer__subscription__pers{
   font-size: 12px;
@@ -549,12 +561,17 @@ input {
     overflow: hidden; 
     position: relative; 
   }
-  
-.section__paper ol:first-of-type li {
-  text-decoration: underline; /* Применение подчеркивания ко всем элементам <li> первого <ol> */
+  .section__paper section__devider{
+    width: 100%;
+    align-items: center; 
+  }
+  .section__points-first li {
+    text-decoration: underline;
 }
 
-.section__header span{
+
+.section__header > span,
+.section__header > a {
   font-size: 14px;
   font-weight: 400;
 }
@@ -563,6 +580,9 @@ input {
 }
 .section__header a:hover{
   color: #a32980;
+}
+.section__header h1{
+  font-size: 1.5em;
 }
   .section__points {
     list-style-image: url('images/circle.png'); /* Путь к изображению точки */
@@ -579,6 +599,10 @@ input {
   .quote__text {
     background-color: #F3F7FE;
     border-radius: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 26px;
+    padding-bottom: 16px;
   }
   .quote__text {
     background-image: url('images/quote.png');
@@ -590,14 +614,15 @@ input {
     }
     .section__header{
       margin-bottom: 16px;
-      margin-top: 24px;
+      margin-top: 16px;
     }
-    .quote__text {
-      padding-left: 16px;
-      padding-right: 16px;
-      padding-top: 26px;
-      padding-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      .section__header{
+      margin-bottom: 24px;
+      margin-top: 38px;
+      }
     }
+    
     .quote__text section:first-child{
       font-style: italic;
       font-weight: 400;
@@ -606,18 +631,69 @@ input {
       font-weight: 700;
   }
   .section__text{
+    font-size: 16px;
     font-weight: 500;
     line-height: 24px;
   }
-  .test{
-    display: flex;
-  flex-wrap: nowrap;}
-  .test1:last-of-type{
-      /*flex-shrink: 0; /* Предотвратить сжатие последнего элемента */
-      white-space: nowrap; /* Запретить перенос содержимого на новую строку */
-      overflow: hidden; /* Скрыть содержимое, которое не умещается */
-      text-overflow: ellipsis; /* Показать многоточие, если содержимое обрезается */
-      width: 100%;
-    
-      
+  .section__descr{
+    font-size: 14px;
+    font-weight: 400;
   }
+  .section__italic{
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    position: relative;
+    display: flex; /* Используем flexbox */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*padding: 8px; /* Добавьте некоторый padding для сохранения пространства вокруг текста и изображения */
+}
+
+.section__italic img {
+    width: 240px; /* Установите фиксированную ширину для изображения */
+    height: auto; /* Высота изменяется автоматически */
+    z-index: -1;
+    position: absolute;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+  .section__exercise{
+    background-color: #FEFAEC;
+    border-radius: 16px; 
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 26px;
+    padding-bottom: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  
+  .section__exercise section:first-child {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.section__flash {
+  display: flex; /* Если внутри есть другие элементы, которые нужно центрировать */
+  justify-content: center; /* Центрирует содержимое блока .section__devider, если это необходимо */
+  width: fit-content; /* Ширина блока по содержимому */
+  margin-left: auto;
+  margin-right: auto; /* Горизонтальное центрирование блока */
+}
+.section__exercise__second{
+  background-color: #FFF3EB;
+}
+
+.section__paper > .section__exercise:last-child {
+  background-color: rgba(3, 178, 165, 0.1); /* #03B2A5 с прозрачностью 10% */
+}
+.aside__family{
+  background-color: #E6F0FD;
+  border-radius: 16px;
+  padding: 16px;
+}
+
