@@ -461,7 +461,7 @@
     max-width: 486px;   
 }
 h2{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 26px;
     
@@ -553,12 +553,14 @@ input {
   .section__paper {
     display: flex;
     flex-direction: column;
+    
 }
+
   .section__paper img{
     width: 100%;
     justify-content: center; 
     align-items: center; 
-    overflow: hidden; 
+   /* overflow: hidden; */
     position: relative; 
   }
   .section__paper section__devider{
@@ -582,7 +584,10 @@ input {
   color: #a32980;
 }
 .section__header h1{
-  font-size: 1.5em;
+  font-size: 1.5rem;
+}
+.section__paper h3{
+  font-size: 1.1rem;
 }
   .section__points {
     list-style-image: url('images/circle.png'); /* Путь к изображению точки */
@@ -603,14 +608,23 @@ input {
     padding-right: 16px;
     padding-top: 26px;
     padding-bottom: 16px;
-  }
-  .quote__text {
     background-image: url('images/quote.png');
     background-repeat: no-repeat;
     background-position: 16px 16px; /* Отступ от левого верхнего угла */
     }
+
+    .quote__text * {
+      font-size: 16px;
+      line-height: 24px;
+
+    }
     .section__paper *{
       margin-bottom: 8px;
+    }
+    @media screen and (min-width: 414px) {
+      .section__paper *{
+      margin-bottom: 16px;
+       }
     }
     .section__header{
       margin-bottom: 16px;
@@ -649,9 +663,10 @@ input {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    /*padding: 8px; /* Добавьте некоторый padding для сохранения пространства вокруг текста и изображения */
+    min-height: 180px;
+    max-width: 485px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section__italic img {
@@ -669,6 +684,7 @@ input {
     padding-right: 16px;
     padding-top: 26px;
     padding-bottom: 16px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 24px;
   }
@@ -676,6 +692,9 @@ input {
   .section__exercise section:first-child {
     font-weight: 700;
     margin-bottom: 8px;
+}
+.section__exercise * {
+  font-size: 16px;
 }
 .section__flash {
   display: flex; /* Если внутри есть другие элементы, которые нужно центрировать */
@@ -691,9 +710,153 @@ input {
 .section__paper > .section__exercise:last-child {
   background-color: rgba(3, 178, 165, 0.1); /* #03B2A5 с прозрачностью 10% */
 }
-.aside__family{
+.aside__card-first{
   background-color: #E6F0FD;
+  }
+@media screen and (min-width: 768px) {
+  .section_pair{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  }
+  .section__paper h3{
+    font-size: 24px;
+  }
+  .section__exercise section:first-child {
+    font-size: 16px;
+}
+}
+@media screen and (min-width: 1024px) {
+  .content__article{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  }
+}
+.aside__tetext{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: 8px;
+}
+.aside__header{
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 24px;
+}
+.aside__psy{
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+.aside__line{
+height: 1px;
+background-color: #DEDEDE;
+width: 100%;
+margin-top: -8px;
+margin-bottom: 8px;
+
+}
+.aside__points li{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.blueheader__number{
+  font-size: 24px;
+  font-weight: 700;
+  color: #2963A3;
+}
+.blueheader__text{
+  color: #2963A3;
+font-size: 18px;
+font-weight: 700;
+}
+.aside__card{
+  position: relative;
   border-radius: 16px;
-  padding: 16px;
+  border-color: #DEDEDE;
+  border-width: 1px;
+  border-style: solid;
+  padding: 24px;
+  box-shadow: 0 30px 50px #EFF5FB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 24px;
+}
+.aside__img{
+  display: flex;
+  justify-content: center;
+}
+.aside__card-third img{
+  width: 100%;
+  height: 100%;
 }
 
+.aside__card-third{
+  padding: 0px;
+  border-style:none;
+  box-shadow:none;
+}
+.aside__card-fourth {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0px;
+  padding-right: 0px;  /* Other necessary styles */
+}
+
+.aside__card-fourth img {
+  position: absolute;
+ bottom: 0px;
+  right: 06px;
+  /*max-width: 100%;*/
+  /*height: auto;
+  /*z-index: -1;*/
+}
+.aside__card-fourth .aside__tetext{
+  text-align: start;
+  margin-right: 16px;
+}
+h5{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.aside__card-second h2{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.aside__connect{
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+}
+.aside__connect div{
+  border-radius: 6px;
+  background-color: rgba(243,244,248,0.7);
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding: 6px;
+  width: fit-content;
+}
+.aside__points{
+  margin-bottom: 20px;
+}
+.aside__price{
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+.aside__butto__last{
+  width: 108px;
+  margin-bottom: 16px;
+}
